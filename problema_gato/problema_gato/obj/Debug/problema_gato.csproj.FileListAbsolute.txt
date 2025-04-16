@@ -1,0 +1,8 @@
+C:\Users\mago_\OneDrive\Escritorio\MargaritaRincon\problema_gato\problema_gato\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mago_\OneDrive\Escritorio\MargaritaRincon\problema_gato\problema_gato\obj\Debug\problema_gato.Form1.resources
+C:\Users\mago_\OneDrive\Escritorio\MargaritaRincon\problema_gato\problema_gato\obj\Debug\problema_gato.Properties.Resources.resources
+C:\Users\mago_\OneDrive\Escritorio\MargaritaRincon\problema_gato\problema_gato\obj\Debug\problema_gato.csproj.GenerateResource.Cache
+C:\Users\mago_\OneDrive\Escritorio\MargaritaRincon\problema_gato\problema_gato\bin\Debug\problema_gato.exe
+C:\Users\mago_\OneDrive\Escritorio\MargaritaRincon\problema_gato\problema_gato\bin\Debug\problema_gato.pdb
+C:\Users\mago_\OneDrive\Escritorio\MargaritaRincon\problema_gato\problema_gato\obj\Debug\problema_gato.exe
+C:\Users\mago_\OneDrive\Escritorio\MargaritaRincon\problema_gato\problema_gato\obj\Debug\problema_gato.pdb
