@@ -1,0 +1,100 @@
+🟢 Nivel Básico (1-10)
+Escenario general: Una base de datos de empleados con las tablas Empleados(id, nombre, edad, salario, departamento_id) y Departamentos(id, nombre).
+SELECT básico
+Muestra todos los datos de la tabla Empleados.
+	Select * 
+	  from Empleados;
+
+Muestra solo el nombre y salario de todos los empleados.
+	Select nombre,salario
+	  from Empleados;
+
+SELECT con WHERE
+Muestra todos los empleados cuyo salario sea mayor a 3000.
+	select * 
+	  from Empleados
+	 where salario > 3000;
+INSERT simple
+Inserta un nuevo empleado llamado "Ana", de 30 años, salario 3500, en el departamento 2.
+	Insert into Empleados
+	values("Ana", "30", 3500, 2);
+
+UPDATE simple
+Aumenta el salario en 10% de todos los empleados del departamento 1.
+	update Empleados 
+	   set salario= salario +(salario*.10)
+  	 where departamento_id =1;
+
+DELETE simple
+Elimina a los empleados cuyo salario sea menor a 1000.
+	delete Empleados 
+	 where salario < 1000;
+
+SELECT con ORDER BY
+Lista los empleados ordenados por salario de mayor a menor.
+	select * 
+	  from Empleados
+	order by salario desc
+
+SELECT con BETWEEN
+Muestra los empleados cuya edad esté entre 25 y 35 años.
+	select * 
+	  from Empleados
+	 where edad between 25 and 35;
+
+SELECT con LIKE
+Muestra los empleados cuyo nombre comience con la letra 'A'.
+	select *
+	  from Empleados
+ 	 where nombre like "A%";
+
+SELECT con alias
+Muestra el nombre y salario de los empleados, renombrando las columnas como Empleado y Ingreso.
+	select nombre as Empleado
+	     , salario as Ingreso
+	  from Empleados;
+
+🟡 Nivel Intermedio (11-20)
+Escenario extendido: Se agregan las tablas Proyectos(id, nombre) y Empleado_Proyecto(empleado_id, proyecto_id).
+JOIN simple
+Muestra el nombre del empleado y el nombre del departamento usando un JOIN.
+JOIN con condiciones
+Muestra los empleados que trabajan en proyectos, incluyendo el nombre del proyecto.
+INSERT desde SELECT
+Copia los empleados del departamento 3 a una nueva tabla Empleados_Backup.
+UPDATE con JOIN
+Aumenta el salario en 500 de todos los empleados que trabajen en el proyecto "Proyecto A".
+DELETE con subconsulta
+Elimina los empleados que no están asignados a ningún proyecto.
+SELECT con funciones de agregación
+Muestra el salario promedio por departamento.
+GROUP BY y HAVING
+Muestra los departamentos con más de 3 empleados.
+Subconsulta en SELECT
+Muestra el nombre del empleado junto con el número de proyectos en los que participa.
+IN con subconsulta
+Muestra los empleados que trabajan en los mismos proyectos que el empleado con id 5.
+CASE en SELECT
+Muestra el nombre del empleado y una columna adicional que diga "Alto", "Medio" o "Bajo" según su salario.
+🔴 Nivel Avanzado (21-30)
+Escenario ampliado: Se incluye una tabla Evaluaciones(id, empleado_id, puntuacion, fecha).
+CTE (Common Table Expression)
+Crea una CTE que calcule el promedio de puntuación por empleado y luego muestra aquellos con promedio mayor a 8.
+Window Functions
+Muestra el nombre del empleado y su salario, junto con el salario promedio por departamento (usando OVER).
+Correlated Subquery
+Muestra empleados cuyo salario es mayor al salario promedio de su departamento.
+MERGE / UPSERT (según SGBD)
+Inserta o actualiza información de Empleados_Backup en Empleados.
+Pivot Table
+Muestra el número de evaluaciones por mes en columnas (enero, febrero, etc.).
+Recursive CTE
+Supón una jerarquía en Empleados(supervisor_id), muestra el árbol de jerarquía de un empleado.
+Trigger básico
+Crea un trigger que registre en una tabla Log_Salarios cada vez que se actualice un salario.
+Procedimiento almacenado
+Crea un procedimiento que reciba un id de empleado y devuelva su salario y proyectos.
+Optimización de consultas
+Reescribe una consulta que use SELECT * para que sea más eficiente seleccionando solo columnas necesarias.
+Índices
+¿Qué columnas de las tablas Empleados y Evaluaciones sugerirías indexar para mejorar rendimiento en búsquedas por salario y puntuación?
